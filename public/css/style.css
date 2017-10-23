@@ -1,0 +1,263 @@
+body{
+  background-color: #EDF0F6;
+}
+/* Top Bar */
+.topb{
+  background-color: #673ab7;
+  padding-top: 3%;
+  padding-bottom: 1%;
+  line-height: 20px;
+}
+
+
+.logo{
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.fp{
+  color: #fff;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+/* Top bar form */
+#ptun{
+  height: 25px;
+  border-radius: 2px;
+  border: 1px solid #311b92;
+  color: #000;
+  background-color: #fff;
+  padding-left: 1%;
+  font-size: 14px;
+}
+
+#ptpw{
+  height: 25px;
+  border-radius: 2px;
+  border: 1px solid #311b92;
+  color: #000;
+  background-color: #fff;
+  padding-left: 1%;
+  font-size: 14px;
+}
+#ptsb{
+  height: 25px;
+  border-radius: 2px;
+  background-color: #311b92;
+  font-size: 13px;
+  color: #fff;
+}
+
+input, button, submit{
+  border:none;
+}
+
+#ptsb:hover{
+  height: 25px;
+  border-radius: 2px;
+  background-color: #4527a0;
+  font-size: 13px;
+  color: #fff;
+}
+
+.slogan h4{
+  font-weight: bold;
+}
+.hmicon ul li i{
+  font-size: 50px;
+  padding-right: 2%;
+  color: #9e9e9e;
+}
+.hmicon ul li{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 30px;
+  font-weight: lighter;
+  display: flex;
+}
+.grayStyle{
+
+}
+
+/* Sign Up */
+
+#rfn{
+  height: 40px;
+  border-radius: 2px;
+  border: 1px solid #673ab7;
+  color: #000;
+  background-color: #fff;
+  padding-left: 1%;
+  font-size: 14px;
+}
+#rln{
+  height: 40px;
+  border-radius: 2px;
+  border: 1px solid #673ab7;
+  color: #000;
+  background-color: #fff;
+  padding-left: 1%;
+  font-size: 14px;
+}
+#re{
+  height: 40px;
+  border-radius: 2px;
+  border: 1px solid #673ab7;
+  color: #000;
+  background-color: #fff;
+  padding-left: 1%;
+  font-size: 14px;
+}
+/* Radio button color */
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+  background-color: #673ab7;
+}
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
+  border: 2px solid #000000;
+}
+/* Calendar color */
+.picker__date-display {
+  text-align: left;
+  background-color: #673ab7;
+  color: #fff;
+  padding: 18px;
+  font-weight: 300;
+}
+/* Three button close, today and clear color in calendar */
+.picker__close, .picker__today, .picker__clear {
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  color: #673ab7;
+}
+/* Select date background color in calendar */
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+    border-radius: 50%;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    background-color: #673ab7;
+    color: #ffffff;
+}
+/* Current date color in calendar */
+.picker__day.picker__day--today {
+  color: #f44336;
+}
+#rdp{
+  height: 40px;
+  width: 160px;
+  border-radius: 2px;
+  border: 1px solid #673ab7;
+  color: #000;
+  background-color: #fff;
+  padding-left: 1%;
+}
+
+
+.tnc{
+  font-size: 12px;
+}
+
+.rsbtn{
+  height: 35px;
+  background-color: #720FBC;
+  border: 1px solid #6703b3;
+  border-radius: 2px;
+  color: #fff;
+}
+.rsbtn:hover{
+  background-color: #842cc7;
+  border: 1px solid #6703b3;
+}
+
+
+/* Lower Section */
+.bt{
+  background-color: #d5d9e0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.lowerTitle{
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #2b2b2b;
+}
+.lowerDesc{
+  font-size: 12px;
+  text-align: justify;
+}
+
+.lower-links ul li a{
+  font-size: 12px;
+  color: #720FBC;
+}
+
+
+/* Footer */
+.footer-copy{
+  background-color: #ECF0F7;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/* User Page */
+/* Top bar */
+.topub{
+  background-color: #673ab7;
+  padding-top: 18px;
+  padding-bottom: 2px;
+}
+
+.ulogo{
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+}
+/* Parallax */
+.parallax-container {
+  height: 300px;
+}
+/* User Detail img and name */
+.udetail{
+  text-align: center;
+}
+
+.udetail img{
+  width: 150px;
+  height: 150px;
+  border: 5px solid #d4d4d4;
+}
+
+.udetail h6{
+  font-weight: bold;
+}
+
+/* User Tab */
+.tabg{
+  background-color: #fff;
+  border-radius: 2px;
+}
+.tabbg{
+  padding-bottom: 2%;
+  border-bottom: 1px solid #000;
+}
+.tabcontent{
+  padding-top: 1%;
+}
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: transparent;
+    color: #720FBC;
+}
+.tabs .tab a {
+  color: #6e45b7;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: bold;
+}
