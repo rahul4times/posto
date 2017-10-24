@@ -322,3 +322,24 @@ textarea:focus {
   border: 1px solid #9c9c9c;
   font-size: 12px;
 }
+
+/* About Tab */
+.uAbout-name{
+  color: #1d2129;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.uTitle{
+  color: #9c9c9c;
+  font-size: 17px;
+  font-weight: normal;
+  text-align: left;
+  letter-spacing: 1px;
+}
+.uContent{
+  color: #1d2129;
+  font-size: 15px;
+  font-weight: normal;
+  text-align: justify;
+}

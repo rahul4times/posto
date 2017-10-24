@@ -3,9 +3,12 @@ module.exports = {
   userProfile: function(req, res){
     knex('user')
       .where('id', req.session.user)
-      .then((result)=>{
-        console.log(result[0]);
-        res.render('profile', {user: result[0]})
+      .then((user)=>{
+        knex('about')
+          .where('user_id', req.session.user)
+          .then((about)=>{
+            res.render('profile', {user: user[0], aboutUser: about[0]})
+          })
       })
   }
 }

@@ -105,9 +105,59 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
         <div id="about" class="col s12">
-          Media
           <br>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <div class="uAbout-name">
+            About <%= user.first_name %>
+            <hr>
+            <br>
+            <div class="col s12 m6">
+              <div class="uTitle">
+                Introduction
+              </div>
+              <div class="uContent">
+                <%= aboutUser.bio %>
+              </div>
+              <br>
+              <div class="uTitle">
+                Work
+              </div>
+              <div class="uContent">
+                <%= aboutUser.work %>
+              </div>
+              <br>
+              <div class="uTitle">
+                Education
+              </div>
+              <div class="uContent">
+                <%= aboutUser.education %>
+              </div>
+              <br>
+              <div class="uTitle">
+                Lives in
+              </div>
+              <div class="uContent">
+                <%= aboutUser.livesin %>
+              </div>
+              <br>
+              <div class="uTitle">
+                From
+              </div>
+              <div class="uContent">
+                <%= aboutUser.from %>
+              </div>
+              <br>
+            </div>
+            <div class="col s12 m6">
+              <div class="uTitle">
+                Relationship
+              </div>
+              <div class="uContent">
+                <%= aboutUser.relationship %>
+              </div>
+              <br>
+            </div>
+
+          </div>
         </div>
       </div>
 
