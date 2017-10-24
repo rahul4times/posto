@@ -1,30 +1,32 @@
-//Update the name of the controller below and rename the file.
-// const company = require("../controllers/user.js");
-// const member = require("../controllers/member.js");
 const user = require("../controllers/user.js")
+const register = require("../controllers/registration.js")
+const profile = require("../controllers/profile.js")
+const logout = require("../controllers/logout.js")
 module.exports = function(app){
 
-  app.get('/', user.login);
-  app.post('/login', user.check);
+  // Index page shows up
+  app.get('/', user.index);
 
-//   app.post('/login', admin.check);
-//
-//   //NOeverything below this is protected
-//   app.use(loginAuthentication);
-//   //NOTE: anything pass this line that will run through this filter. thats how app.use works.
-//
-//   app.get('/', company.index);
-//
-//   app.get('/company/:id', company.getOne);
-//
-//   app.post('/member/:co_id', member.create);
-//
-//   app.post('/company', company.create);
+  // User login
+  app.post('/login', user.login);
+
+  // User registration
+  app.post('/register', register.createUser);
+
+  // loginAuthentication will check after this point
+  app.use(loginAuthentication);
+
+  // After login user will be redirected to profile
+  app.get('/profile', profile.userProfile);
+
+  // logout
+  app.get('/logout', logout.getOut);
+
+
 }
-
 function loginAuthentication(req,res,next){
   if(req.session.user){
-    next(); //NOTE: if condition meets then go to next task which will make routes work after line 12
+    next();
   }else{
     res.redirect('/');
   }

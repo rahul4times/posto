@@ -111,6 +111,25 @@ input, button, submit{
   padding-left: 1%;
   font-size: 14px;
 }
+.smsg{
+  color: #000;
+  font-size: 14px;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+#rp{
+  height: 40px;
+  border-radius: 2px;
+  border: 1px solid #673ab7;
+  color: #000;
+  background-color: #fff;
+  padding-left: 1%;
+  font-size: 14px;
+}
+
 /* Radio button color */
 [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
   background-color: #673ab7;
@@ -217,9 +236,31 @@ input, button, submit{
   letter-spacing: 2px;
   color: #fff;
 }
+
+/* User Profile Button*/
+.btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #332791;
+  height: 25px;
+  line-height: 27px;
+  font-size: 12px;
+}
+
+.btn:hover, .btn-large:hover {
+  background-color: #4f3ca2;
+}
+.dropdown-content li a{
+  font-size: 14px;
+  color: #720FBC;
+  display: block;
+  line-height: 22px;
+  padding: 14px 10px;
+}
+
 /* Parallax */
 .parallax-container {
-  height: 300px;
+  height: 350px;
 }
 /* User Detail img and name */
 .udetail{
@@ -249,8 +290,8 @@ input, button, submit{
   padding-top: 1%;
 }
 .tabs .tab a:hover, .tabs .tab a.active {
-    background-color: transparent;
-    color: #720FBC;
+  background-color: transparent;
+  color: #720FBC;
 }
 .tabs .tab a {
   color: #6e45b7;
@@ -260,4 +301,24 @@ input, button, submit{
   padding: 0 24px;
   font-size: 14px;
   font-weight: bold;
+}
+.tabs .indicator {
+  background-color: #673ab7;
+}
+
+textarea {
+  resize: none;
+  border-radius: 2px;
+  border: 1px solid #9c9c9c;
+}
+textarea:focus {
+  outline: none;
+}
+.upb{
+  height: 44px;
+  border-radius: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #9c9c9c;
+  font-size: 12px;
 }

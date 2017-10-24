@@ -15,21 +15,29 @@
   <div class="topub">
     <div class="row">
       <div class="container">
-        <div class="col s12 m5">
+        <div class="col s12 m4">
           <a class="ulogo" href="/">Postogether</a>
         </div>
         <form>
           <div class="col s12 m2">
-            <input id="ptun" type="email" name="" placeholder="Email">
+            <input id="ptun" type="email" name="" placeholder="Email" required>
           </div>
           <div class="col s12 m2">
-            <input id="ptpw" type="password" name="" placeholder="Password">
+            <input id="ptpw" type="password" name="" placeholder="Password" required>
           </div>
-          <div class="col s12 m1">
+          <div class="col s12 m2">
             <input id="ptsb" type="submit" value="Log In">
           </div>
           <div class="col s12 m2">
-            <a class="fp" href="#">Forgot Password</a>
+            <a class='dropdown-button btn' href='#' data-activates='dropdown1'>
+              <%= user.first_name %></a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+              <li><a href="#!">Edit Profile</a></li>
+              <li><a href="/logout">Log Out</a></li>
+              <li class="divider"></li>
+            </ul>
           </div>
         </form>
       </div>
@@ -49,7 +57,8 @@
   <div class="container">
     <div class="section udetail">
       <img src="img/user.jpg" class="circle" alt="">
-      <h6>Anna</h6>
+      <h6><%= user.first_name %> <%= user.last_name %></h6>
+
     </div>
   </div>
 
@@ -62,31 +71,40 @@
           <ul class="tabs">
             <li class="tab col s3"><a class="active" href="#posts">
               Posts</a></li>
-            <li class="tab col s3"><a href="#comments">
-              Comments</a></li>
-            <li class="tab col s3"><a href="#friends">
-              Friends</a></li>
             <li class="tab col s3"><a href="#media">
               Media</a></li>
+            <li class="tab col s3"><a href="#friends">
+              Friends</a></li>
+            <li class="tab col s3"><a href="#about">
+              About</a></li>
           </ul>
         </div>
         <div id="posts" class="col s12 tabcontent">
           <br>
-          Posts
-          <br>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <form action="/post/<%= user.id %>" method="post">
+            <div class="row">
+              <div class="col s12 m11">
+                <textarea name="content" rows="8" cols="80"
+                placeholder="Post something"></textarea>
+              </div>
+              <div class="col s12 m1">
+                <input class="upb" type="submit" value="Post">
+              </div>
+            </div>
+          </form>
+          <hr>
         </div>
-        <div id="comments" class="col s12">
-          Comments
-          <br>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-        <div id="friends" class="col s12">
+        <div id="media" class="col s12">
           Friends
           <br>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
-        <div id="media" class="col s12">
+        <div id="friends" class="col s12">
+          Media
+          <br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div id="about" class="col s12">
           Media
           <br>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

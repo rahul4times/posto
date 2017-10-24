@@ -3,7 +3,9 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('first_name');
     table.string('last_name');
-    table.string('email');
+    table.string('email')
+    .notNullable()
+    .unique();
     table.string('password');
     table.string('gender');
     table.date('dob');

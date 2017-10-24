@@ -20,10 +20,10 @@
         </div>
         <form action="/login" method="post">
           <div class="col s12 m2">
-            <input id="ptun" type="email" name="email" placeholder="Email">
+            <input id="ptun" type="email" name="email" placeholder="Email" required>
           </div>
           <div class="col s12 m2">
-            <input id="ptpw" type="password" name="password" placeholder="Password">
+            <input id="ptpw" type="password" name="password" placeholder="Password" required>
           </div>
           <div class="col s12 m1">
             <input id="ptsb" type="submit" value="Log In">
@@ -58,23 +58,27 @@
         <div class="col s12 m5">
           <div class="slogan">
             <h4>Sign Up</h4>
-            <p>It's free</p>
+            <p class="smsg"><%= successMsg %></p>
           </div>
           <hr>
           <br>
-          <form action="index.html" method="post">
-            <input id="rfn" type="text" name="" placeholder="First Name">
-            <input id="rln" type="text" name="" placeholder="Last Name">
-            <input id="re" type="email" name="" placeholder="Email">
-            <input name="group1" type="radio" id="test1" />
-            <label for="test1">Male</label>
-            <input name="group1" type="radio" id="test2" />
-            <label for="test2">Female</label>
+          <form action="/register" method="post">
+            <input id="rfn" type="text" name="first_name" placeholder="First Name" required>
+            <input id="rln" type="text" name="last_name" placeholder="Last Name" required>
+
+            <input id="re" type="email" name="email" placeholder="Email" required>
+            <input id="rp" type="password" name="password" placeholder="Password" required>
+            <input name="gender" type="radio" value="Male" id="male" />
+            <label for="male">Male</label>
+            <input name="gender" type="radio" value="Female" id="female" />
+            <label for="female">Female</label>
             <br>
             <br>
-            <input id="rdp" type="text" class="datepicker" placeholder="Date of Birth">
-            <p class="tnc">By clicking Create Account, you agree to our Terms and that you have read our Data Policy, including our Cookie Use.</p>
+            <input id="rdp" type="text" name="dob" class="datepicker" placeholder="Date of Birth">
+            <br>
             <input class="rsbtn" type="submit" value="Create Account">
+            <p class="tnc">By clicking Create Account, you agree to our Terms and that you have read our Data Policy, including our Cookie Use.</p>
+
           </form>
         </div>
       </div>
