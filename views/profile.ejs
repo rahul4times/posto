@@ -97,7 +97,13 @@
         <div id="media" class="col s12">
           Friends
           <br>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <% if (userFriends) { %>
+            <% for(let i=0; i<userFriends.length; i++){ %>
+                <% if(userFriends[i].user_id === user.id){ %>
+                <%= userFriends[i].id %>
+              <% } %>
+            <% } %>
+          <% } %>
         </div>
         <div id="friends" class="col s12">
           Media
@@ -115,35 +121,45 @@
                 Introduction
               </div>
               <div class="uContent">
-                <%= aboutUser.bio %>
+                <% if (aboutUser) { %>
+                 <%= aboutUser.bio %>
+                <% } %>
               </div>
               <br>
               <div class="uTitle">
                 Work
               </div>
               <div class="uContent">
-                <%= aboutUser.work %>
+                <% if (aboutUser) { %>
+                 <%= aboutUser.work %>
+                <% } %>
               </div>
               <br>
               <div class="uTitle">
                 Education
               </div>
               <div class="uContent">
-                <%= aboutUser.education %>
+                <% if (aboutUser) { %>
+                 <%= aboutUser.education %>
+                <% } %>
               </div>
               <br>
               <div class="uTitle">
                 Lives in
               </div>
               <div class="uContent">
-                <%= aboutUser.livesin %>
+                <% if (aboutUser) { %>
+                 <%= aboutUser.livesin %>
+                <% } %>
               </div>
               <br>
               <div class="uTitle">
                 From
               </div>
               <div class="uContent">
-                <%= aboutUser.from %>
+                <% if (aboutUser) { %>
+                 <%= aboutUser.form %>
+                <% } %>
               </div>
               <br>
             </div>
@@ -152,7 +168,9 @@
                 Relationship
               </div>
               <div class="uContent">
-                <%= aboutUser.relationship %>
+                <% if (aboutUser) { %>
+                 <%= aboutUser.relationship %>
+                <% } %>
               </div>
               <br>
             </div>
