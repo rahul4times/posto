@@ -12,6 +12,10 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+  "here is my data of friends : "
+  <%= userFriends %>
+
+
   <div class="topub">
     <div class="row">
       <div class="container">
@@ -98,11 +102,9 @@
           Friends
           <br>
           <% if (userFriends) { %>
-            <% for(let i=0; i<userFriends.length; i++){ %>
-                <% if(userFriends[i].user_id === user.id){ %>
-                <%= userFriends[i].id %>
-              <% } %>
-            <% } %>
+             <%= "my user id is " +userFriends[0].friend_id %>
+
+
           <% } %>
         </div>
         <div id="friends" class="col s12">

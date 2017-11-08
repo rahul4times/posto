@@ -1,0 +1,5 @@
+<!-- <% for(let i=0; i<userFriends.length; i++){ %>
+    <% if(userFriends[i].user_id === user.id){ %>
+    <%= userFriends[i].id %>
+  <% } %>
+<% } %> -->
